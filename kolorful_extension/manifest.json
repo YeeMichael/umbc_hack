@@ -3,13 +3,27 @@
 
   "name": "Kolorful",
   "description": "Kolorful will analyze the current webpage's color distribution",
-  "version": ".01b",
+  "version": "1.0",
 
   "browser_action": {
-   "default_icon": "Kolorful_icon.png",
-   "default_popup": "popup.html"
+  "default_icon": "Kolorful_icon.png",
+  "default_popup": "popup.html"
+
   },
+
   "permissions": [
-    "activeTab"
-   ]
+    "tabs"
+  ],
+
+  "content_scripts": [
+  {
+    "matches": [
+      "<all_urls>"
+    ],
+      "js": ["contentv2_wip.js"]
+    }
+  ]
+
+
+
 }
